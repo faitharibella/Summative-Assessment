@@ -59,9 +59,9 @@ a{
     
     /* Layout positioning */
     display: flex;
-    justify-content: center; /* Centers the success text exactly */
+    justify-content: center; 
     align-items: center;
-    position: relative;     /* Allows the X button to hang out on the right */
+    position: relative;     
 }
 
 /* Forces the login shortcut inside the alert box to keep its underline */

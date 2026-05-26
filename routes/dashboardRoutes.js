@@ -3,11 +3,10 @@ const router = express.Router();
 const Product = require("../model/Product");
 const multer = require("multer"); // 1. Import multer
 
-// 2. Configure Multer to hold the file temporarily in memory (RAM) as a Buffer
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-// GET: Render Dashboard with Dynamic Table & Live Computations (Stays the same!)
+//get dashboardRoute
 router.get("/dashboard", async (req, res) => {
   try {
     // Fetch all real products from the database
@@ -35,7 +34,6 @@ router.get("/dashboard", async (req, res) => {
 });
 
 // POST: Save New Product Form Data AND Image Binary to Database
-// 3. Add upload.single("productImage") here. "productImage" must match your Pug input name!
 router.post("/dashboard", upload.single("productImage"), async (req, res) => {
   const { name, category, price, quantity, color } = req.body;
   
