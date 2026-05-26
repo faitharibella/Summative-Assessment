@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(rel='stylesheet' href='/css/login.css')
+.container
+  h1 Login
+  
+  //- UPDATED: Added id='loginForm' and novalidate attributes
+  form(action='/login' method='POST' id='loginForm' novalidate)
+    input(type='email' name='email' placeholder='Email' required)
+    input(type='password' name='password' placeholder='Password' required)
+    button(type='submit') LOGIN
+    
+  p
+    | Don't have an account? 
+    a(href='/signup') Sign Up
+
+//- VALIDATION SCRIPT: Pushed completely to the left margin wall
+script.
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+      let formIsValid = true;
+      const inputs = this.querySelectorAll('input[required]');
+      
+      // Reset any previous red borders
+      inputs.forEach(input => {
+          input.classList.remove('invalid-input');
+      });
+
+      // Loop through and catch empty fields
+      inputs.forEach(input => {
+          if (input.value.trim() === '') {
+              formIsValid = false;
+              input.classList.add('invalid-input'); // Slaps the red line on
+          }
+      });
+
+      // Freeze submission if validation fails
+      if (!formIsValid) {
+          event.preventDefault();
+      }
+  });

@@ -1,0 +1,247 @@
+/* --- Global Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Layout Structure --- */
+.top-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+}
+
+/* Left side layout (cards) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* --- Component Styling: Cards --- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.dual-card {
+  grid-column: span 2;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.stat-box {
+  text-align: center;
+  flex: 1;
+}
+
+.divider {
+  width: 1px;
+  background-color: #cbd5e1;
+  height: 80px;
+  margin: 0 20px;
+}
+
+.card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: #718096;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.text-green { color: #00b050 !important; }
+.text-red { color: #ff0000 !important; }
+
+/* --- Component Styling: Form --- */
+.form-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 25px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #1a202c;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* FIXED: Applies formatting to both input[type="text"] AND input[type="number"] */
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  color: #333;
+}
+
+form input::placeholder {
+  color: #a0aec0;
+}
+
+.form-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.btn-upload {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #a0aec0;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.btn-save {
+  background-color: #f27a30;
+  color: #ffffff;
+}
+
+.btn-clear {
+  background-color: #cccccc;
+  color: #000000;
+}
+
+/* --- Component Styling: Table --- */
+.table-section {
+  width: 100%;
+  background-color: #ffffff;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px;
+  border: 1px solid #000000;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+  color: #1a202c;
+  border: 1px solid #4a5568;
+}
+
+tbody tr {
+  background-color: #ffffff;
+}
+/* Container to keep inputs and errors stacked */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Red border wrapper class applied via JavaScript */
+.invalid-input {
+  border: 1px solid #ff0000 !important;
+}
+
+/* Invalid field text properties matching your image */
+.error-msg {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  display: none; /* Stays invisible until validation fails */
+  text-align: left;
+}
+/* Success Alert Box Styling */
+.alert-banner-green {
+  background-color: #00b050; /* Matches your in-stock dynamic text green color */
+  color: #ffffff;
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Clear white close 'x' button inside the banner */
+.alert-close-btn {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+.alert-close-btn:hover {
+  opacity: 0.7;
+}

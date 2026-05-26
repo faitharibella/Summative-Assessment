@@ -1,0 +1,37 @@
+body{
+    background-color: #eeeeee;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: turquoise;
+    padding: 40px;
+    width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+h2{
+    color: white;
+    font-size: 20px;
+}
+p{
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+}
+.button-style{
+    width: 50%;
+    background-color: rgb(94, 175, 175);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+.button-style:hover{
+    background-color: purple;
+    cursor: pointer;
+}
