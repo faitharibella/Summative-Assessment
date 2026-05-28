@@ -10,7 +10,6 @@ require('dotenv').config();
 const connectDb = require('./config/db')
 
 //Import user model
-const Registration = require('./model/Signup');
 const Signup = require('./model/Signup');
 
 // SECTION 2: Instantiations
